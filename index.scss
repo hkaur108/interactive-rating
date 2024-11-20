@@ -1,0 +1,138 @@
+@import "colors";
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bodyBackgroundColor;
+    color:$textColor;
+    font-size: $textSize;
+    font-family: $fontFamily;
+    padding:70px 0;
+}
+
+.container{
+    width:30vw;
+    background-color: $cardBackgroundColor;
+    margin: 5em  auto 5em auto;
+    border-radius: 20px;
+    padding:3em;
+    box-shadow: 0px 0px 5px 5px rgb(87, 86, 86);
+}
+.image-container{
+    width:100px;
+    svg{
+        width:100%;
+    }
+}
+
+.content-container {
+    h1{
+        font-size: 3em;
+        margin:1em 0;
+    }
+    p{
+        margin:2em auto;
+        font-size: .5em;
+    }
+    
+}
+
+.button-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:2em auto;
+    .btn{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        background-color: $innerColor;
+        text-align: center;
+        padding:1.2em 0;
+        
+    }
+    .btn:hover, .active{
+        cursor: pointer;
+        background-color: $orangeRed;
+        color:#1E201E
+    }
+
+    
+}
+
+
+.submit-button{
+    width:100%;
+    background-color: $orangeRed;
+    padding:.5em;
+    border-radius: 20px;
+    text-transform:uppercase;
+    font-weight: bold;
+    
+}
+
+
+
+.submit-button:hover{
+    cursor: pointer;
+}
+
+// second container
+
+.thank-you-container{
+    display:none;
+    margin:auto;
+    text-align: center;
+    p:nth-child(1){
+        display: block;
+        width:70%;
+        margin:1em auto;
+        background-color: $innerColor;
+        padding:.9em;
+        border-radius:30px;
+        color:$orangeRed;
+    }
+    h1{
+        font-size: 4em;
+        margin:1em auto .2em auto;
+    }
+    p:nth-child(2){
+        font-size:.4em;
+    }
+}
+
+
+@media screen and (max-width:1200px){
+ 
+    .container{
+        width:40vw;
+    }
+    .btn{
+        margin-left: .8em;
+    }
+}
+
+
+
+@media screen and (max-width:768px){
+
+    .container{
+        width:50vw;
+    }
+}
+
+
+
+@media screen and (max-width:600px){
+  
+    .container{
+        width:70vw;
+    }
+   
+   
+}
