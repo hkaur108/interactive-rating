@@ -1,5 +1,5 @@
+@use './thanks';
 @import "colors";
-
 
 *{
     margin:0;
@@ -10,75 +10,94 @@
 body{
     background-color: $bodyBackgroundColor;
     color:$textColor;
-    font-size: $textSize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: $fontFamily;
-    padding:70px 0;
-    width: 100%;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center
+    min-height: 100vh;
+    font-size: 15px;
 }
 
 .container{
-    width:30vw;
+    display: block;
+    width:100%;
+    max-width:400px;
     background-color: $cardBackgroundColor;
     margin: 5em  auto 5em auto;
     border-radius: 20px;
-    padding:3em;
-    box-shadow: 0px 0px 5px 5px rgb(87, 86, 86);
-}
-.image-container{
-    width:100px;
-    svg{
-        width:100%;
-    }
-}
-
-.content-container {
+    padding:2em;
     h1{
-        font-size: 3em;
-        margin:1em 0;
+        letter-spacing: 2px;  
+        margin:1.20rem auto 0 auto;
+        color:$textColor;
     }
     p{
-        margin:2em auto;
-        font-size: .5em;
+        color:$lightGrey;
+        line-height: 1.50rem;
+        margin:1rem 0;
     }
+}
+.image-container{
+    width:100%;
+    max-width: 50px;
+    background-color: hsl(215, 22%, 23%);
+    border-radius: 50%;
+    padding:1em;
+   
     
+    svg{
+        display: block;
+        margin:auto;
+
+    }
 }
 
 .button-container{
-    display:flex;
+    margin:2rem auto;
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    margin:2em auto;
     .btn{
         width:50px;
         height:50px;
         border-radius: 50%;
-        background-color: $innerColor;
+        background-color: hsl(215, 22%, 28%);
+        color: $lightGrey;
         text-align: center;
-        padding:1.2em 0;
+        padding: 0;
+        font-size: 1rem;
+        outline: none;
+        border:none;
+        transition:all 0.2s ease-in;
         
-    }
-    .btn:hover, .active{
-        cursor: pointer;
-        background-color: $orangeRed;
-        color:#1E201E
-    }
+        &:hover{
+            cursor: pointer;
+            background-color: $orangeRed;
+            color:#1E201E
 
-    
+        }
+        &:active{
+            cursor: pointer;
+            background-color: $textColor;
+            color:$bodyBackgroundColor;
+        }
+    }
 }
 
 
 .submit-button{
     width:100%;
     background-color: $orangeRed;
-    padding:.5em;
+    padding:1em;
     border-radius: 20px;
     text-transform:uppercase;
     font-weight: bold;
-    
+    letter-spacing: .2rem;
+    &:hover{
+        background-color:$textColor;
+        color:$bodyBackgroundColor;
+    }
 }
 
 
@@ -87,57 +106,6 @@ justify-content: center
     cursor: pointer;
 }
 
-// second container
-
-.thank-you-container{
-    display:none;
-    margin:auto;
-    text-align: center;
-    p:nth-child(1){
-        display: block;
-        width:70%;
-        margin:1em auto;
-        background-color: $innerColor;
-        padding:.9em;
-        border-radius:30px;
-        color:$orangeRed;
-    }
-    h1{
-        font-size: 4em;
-        margin:1em auto .2em auto;
-    }
-    p:nth-child(2){
-        font-size:.4em;
-    }
-}
-
-
-@media screen and (max-width:1200px){
- 
-    .container{
-        width:40vw;
-    }
-    .btn{
-        margin-left: .8em;
-    }
-}
-
-
-
-@media screen and (max-width:768px){
-
-    .container{
-        width:50vw;
-    }
-}
-
-
-
-@media screen and (max-width:600px){
-  
-    .container{
-        width:70vw;
-    }
-   
-   
+.active{
+    background-color: $orangeRed;
 }

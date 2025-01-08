@@ -1,7 +1,16 @@
-$bodyBackgroundColor:#021526;
-$cardBackgroundColor:#0B192C;
-$textColor:#ECDFCC;
-$fontFamily:Arial,Helvetica,sans-serif;
-$textSize:10px;
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+$bodyBackgroundColor:hsl(216, 12%, 8%);
+$cardBackgroundColor:hsl(213, 19%, 18%);
+$textColor:hsl(0, 0%, 100%);
+$fontFamily:"Overpass", serif;
 $innerColor:#1E3E62;
-$orangeRed:#f3653a;
+$orangeRed:hsl(25, 97%, 53%);
+$lightGrey:hsl(217, 12%, 63%);
+
+
+// - White: hsl(0, 0%, 100%)
+// - Light Grey: hsl(217, 12%, 63%)
+// - Dark Blue: hsl(213, 19%, 18%)
+// - Very Dark Blue: hsl(216, 12%, 8%)
